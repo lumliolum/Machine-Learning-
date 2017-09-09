@@ -1,3 +1,5 @@
+# program for fitting the straight line for the data
+# implementation of linear regression
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -5,7 +7,7 @@ import matplotlib.pyplot as plt
 # we can use this function too for loading
 #x=np.genfromtxt('data.txt',delimiter=',')[:,:-1]
 
-# try to remember this function used to load the data
+# for loading the data
 x=np.loadtxt('data.txt',delimiter=',',usecols=range(2))
 
 X_old=x[:,0:1]           #first column
@@ -82,7 +84,7 @@ X=np.hstack((add,X_old))                # adding a column of ones to X..
 #initializing parameters
 theta=np.zeros((n,1))                # will create a matrix of dimension 2x1
 
-# checking whether cost function is working correct or not.
+# checking whether algorithm is working correct or not.
 print(X,y,theta)
 print("the expected value is 32.07")
 
@@ -94,3 +96,4 @@ print(theta[1])
 
 # will plot the final result that is will plot the best fit.
 plotresult(X_old,y,theta)
+
