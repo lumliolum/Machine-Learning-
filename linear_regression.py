@@ -40,8 +40,8 @@ def plotCost(J,iterations):
 
 # will plot the final result
 def plotresult(X,y,theta):
-    plt.plot(X,y,'rx',label='Training data')
     plt.axis([4,25,-5,25])
+    plt.plot(X,y,'rx',label='Training data')
     plt.xlabel("Population of city in 10,000's")
     plt.ylabel("Profit in $10,000")
     x=np.linspace(4,25,200)
