@@ -103,14 +103,14 @@ print(X.shape,y.shape,initial_theta.shape)
 
 print(costfunction(initial_theta,X,y))    # just checking that cost function is working fine.
 theta1=gradientDescent(X,y,initial_theta,alpha,iterations)
-
+print(theta1)
 # will plot the decision boundary
 plotresult(X_old,y,theta1)
 
 # the function is minimized using minimize
 k=y.reshape(m,)
-theta2=op.minimize(fun=costfunction,x0=initial_theta,args=(X,k),method='TNC')
-theta2=theta2.x
-print(theta2);
-theta2=np.array(theta2).reshape((len(theta2),1))
-plotresult(X_old,y,theta2)
+# theta2=op.minimize(fun=costfunction,x0=initial_theta,args=(X,k),method='TNC')
+# theta2=theta2.x
+# print(theta2);
+# theta2=np.array(theta2).reshape((len(theta2),1))
+# plotresult(X_old,y,theta2)
